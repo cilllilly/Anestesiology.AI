@@ -1,0 +1,40 @@
+#mainSection{
+    text-align: center;
+    line-height: 50px;
+    width: 800px;
+    margin: 2% auto;
+    padding: 5%;
+
+}
+
+h1{
+    color: rgb(48, 127, 245);
+}
+
+#continueButton{
+    margin: 10% 0;
+    padding: 15px 30px;
+    outline: none;
+    background-image: linear-gradient(45deg, #0398fc, #493af2);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    transition:all 0.3s ease;
+    box-shadow: 0 5px #2b4557;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#continueButton:hover{
+    box-shadow: 0 3px #2b4557;
+    background-image: linear-gradient(45deg, #9e40dd, #3d3af2);
+    transform: translateY(4px);
+}
+
+#continueButton:active{
+    box-shadow: 0 2px #2b4557;
+    transform: translateY(7px);
+}
