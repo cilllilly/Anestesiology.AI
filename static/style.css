@@ -11,7 +11,7 @@ h1{
     color: rgb(48, 127, 245);
 }
 
-#continueButton{
+.mainButton{
     margin: 10% 0;
     padding: 15px 30px;
     outline: none;
@@ -28,13 +28,13 @@ h1{
     overflow: hidden;
 }
 
-#continueButton:hover{
+.mainButton:hover{
     box-shadow: 0 3px #2b4557;
     background-image: linear-gradient(45deg, #9e40dd, #3d3af2);
     transform: translateY(4px);
 }
 
-#continueButton:active{
+.mainButton:active{
     box-shadow: 0 2px #2b4557;
     transform: translateY(7px);
 }

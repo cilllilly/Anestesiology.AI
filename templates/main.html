@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MainPage</title>
+    <link rel="stylesheet" href="../static/style.css">
+
+    <title>Anesthesiology app</title>
 </head>
 <body>
-    <div id = "container">
+    <div id = "mainSection">
         <h1>Anesthesia calculator</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cumque maiores quibusdam excepturi consequuntur dignissimos, dicta voluptate molestiae praesentium recusandae quo ab, explicabo soluta odio sequi cupiditate, qui cum nihil!</p>
         <form action="" id = "options">
@@ -49,8 +51,9 @@
                 <input type="text" name = "opperation" id = "opperationInput">
                 <p>* optional</p>
             </div>
-
+            <button id = "calculateButton" class = "mainButton">Calculate</button>
         </form>
     </div>
+    <script type = "text/javascript" src = "{{url_for('static', filename = 'calc.js')}}"></script>
 </body>
 </html>
