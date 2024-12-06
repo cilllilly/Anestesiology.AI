@@ -5,7 +5,7 @@ getXmlHttpRequestObject = function(){
     }
     return xhr;
 }
-function getData(e){
+function sendData(e){
     e.preventDefault()//stop the page from reloading when data is submitted
     let weight = document.getElementById("weightInput").value 
     console.log(weight);
@@ -33,7 +33,7 @@ function getData(e){
 
     xhr = getXmlHttpRequestObject();
     //send post request
-    xhr.open("POST","http://127.0.0.1:8000/views/calculate", true);
+    xhr.open("POST","http://127.0.0.1:8000/views/submit", true);
     //Allow server to accept json files. 
     xhr.setRequestHeader("Accept", "application/json");
     xhr.setRequestHeader("Content-Type","Application/json");
@@ -47,7 +47,32 @@ function getData(e){
         "age": age,
         "opperation": opperation
     }));
-
+    waitForData();
 }
 
-document.getElementById("calculateButton").addEventListener("click", getData)
+document.getElementById("calculateButton").addEventListener("click", sendData)
+
+async function waitForData() {
+    await fetch("/views/submit");
+    getData();
+}
+
+async function getData(){
+    const response = await fetch("/views/getData");
+    const result = await response.json();
+    if(result.data){
+        display(result.data)
+    }
+    else{
+        setTimeout(getData, 1000);
+    }
+}
+
+function display(calculations){
+    console.log(calculations);
+    document.getElementById("result").style.display = "block";
+    var minDose = document.getElementById("minDose");
+    var maxDose = document.getElementById("maxDose");
+    minDose.innerText = calculations["MinDose"] + "mg";
+    maxDose.innerText = calculations["MaxDose"] + "mg";
+}
