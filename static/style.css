@@ -13,7 +13,7 @@ h1{
 
 .mainButton{
     margin: 10% 0;
-    padding: 15px 30px;
+    padding: 10px 20px;
     outline: none;
     background-image: linear-gradient(45deg, #0398fc, #493af2);
     color: white;
@@ -26,6 +26,7 @@ h1{
     position: relative;
     z-index: 1;
     overflow: hidden;
+    
 }
 
 .mainButton:hover{
@@ -41,4 +42,16 @@ h1{
 
 #result{
     display: none;
+}
+
+#image{
+    width: 70%;
+}
+
+#title{
+    margin: 5%;
+}
+
+#subtitle{
+    margin-bottom: 2%;
 }
