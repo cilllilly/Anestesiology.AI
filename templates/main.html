@@ -62,11 +62,24 @@
         </div>
         <div id = "result">
             <h3>Anesthesia Calculations</h3>
-            <h4>Minimum Dose</h4>
-            <h5 id = "minDose"></h5>
-            <h4>Maximum Dose</h4>
-            <h5 id = "maxDose"></h5>
+            <div id = "cards">
+                <div class="card text-center mb-3" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Minimum Dose</h5>
+                      <p id = "minDose" class="card-text"></p>
+                    </div>
+                </div>
+    
+                <div class="card text-center mb-3" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Maximum Dose</h5>
+                      <p id = "maxDose" class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+            
         </div>
+        
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script type = "text/javascript" src = "{{url_for('static', filename = 'calc.js')}}"></script>

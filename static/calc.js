@@ -1,4 +1,5 @@
 let xhr = null;
+var load = document.getElementById("loading")
 getXmlHttpRequestObject = function(){
     if(!xhr){
         xhr = new XMLHttpRequest()
@@ -6,6 +7,7 @@ getXmlHttpRequestObject = function(){
     return xhr;
 }
 function sendData(e){
+    load.style.display = "block";
     e.preventDefault()//stop the page from reloading when data is submitted
     let weight = document.getElementById("weightInput").value 
     console.log(weight);
@@ -69,6 +71,7 @@ async function getData(){
 }
 
 function display(calculations){
+    load.style.display = "none";
     console.log(calculations);
     document.getElementById("result").style.display = "block";
     var minDose = document.getElementById("minDose");

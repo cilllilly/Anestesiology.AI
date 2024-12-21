@@ -40,7 +40,7 @@ h1{
     transform: translateY(7px);
 }
 
-#result{
+#result, #loading{
     display: none;
 }
 
@@ -54,4 +54,9 @@ h1{
 
 #subtitle{
     margin-bottom: 2%;
+}
+
+#cards{
+    display: flex;
+    justify-content: space-between;
 }
