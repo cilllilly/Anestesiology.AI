@@ -38,7 +38,7 @@ def submit():
         print(data)
         weight = round(int(data["weight"]) / 2.2)
         print(weight)
-        response = model.generate_content(f"How long is the surgery for {data["opperation"]}? Only give us the approximate time in minutes.")
+        response = model.generate_content(f"How long is the surgery for {data['opperation']}? Only give us the approximate time in minutes.")
         surgeryTime = response.text
         times = re.findall(r'\d+', surgeryTime)
         times = list(map(int, times))
