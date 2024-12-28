@@ -30,6 +30,7 @@ def calculate():
     
     return render_template("main.html")
 
+#calculate anesthesia amount. 
 @views.route("/submit", methods = ["POST", "GET"])
 def submit():
     global anesthesiaCalc
